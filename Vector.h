@@ -13,7 +13,7 @@ public:
 		cout << "Enter vector coords (with ' '): ";
 		cin >> x >> y;
 
-		return Vector(x, y);
+		return { x, y };
 	}
 
 	double vector_modul()
@@ -23,20 +23,16 @@ public:
 		return modul;
 	}
 
-	Vector vector_sum(Vector *v2)
+	void vector_sum(Vector *v2)
 	{
 		x += v2->x;
 		y += v2->y;
-
-		return Vector(x, y);
 	}
 
-	Vector vector_minus(Vector *v2)
+	void vector_minus(Vector *v2)
 	{
 		x -= v2->x;
 		y -= v2->y;
-
-		return Vector(x, y);
 	}
 
 	void vector_output()
